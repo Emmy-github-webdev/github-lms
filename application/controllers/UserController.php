@@ -30,7 +30,7 @@ class UserController extends CI_Controller {
             $sdata = array();
             $sdata['msg'] = '<span style="color:red">Username and/or Password incorrect</span>';
             $this->session->set_flashdata($sdata);
-            redirect("usercontroller/login");
+            redirect("UserController/login");
         }
     }
 
@@ -38,6 +38,6 @@ class UserController extends CI_Controller {
         $this->session->unset_userdata($userid);
         $this->session->set_userdata('userLogin', FALSE);
         $this->session->sess_destroy();
-        redirect("usercontroller/login");
+        redirect("UserControllerr/login");
     }
 }    
