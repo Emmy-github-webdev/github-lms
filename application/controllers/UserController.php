@@ -10,8 +10,8 @@ class UserController extends CI_Controller {
     }
 
     public function login(){
-        If($this->session->userdata("userid"))
-        return redirect("LibraryController");        
+       /*  If($this->session->userdata("userid"))
+        return redirect("LibraryController"); */        
 		$this->load->view('login');
     }
 
