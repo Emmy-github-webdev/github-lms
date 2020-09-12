@@ -5,14 +5,13 @@ class UserController extends CI_Controller {
   
     public function __construct(){
         parent::__construct();
-        If($this->session->userdata("userid"))
-        return redirect("LibraryController");
         $this->load->model('UserModel');
         $data = array();
     }
 
     public function login(){
-        
+        If($this->session->userdata("userid"))
+        return redirect("LibraryController");        
 		$this->load->view('login');
     }
 
