@@ -9,11 +9,15 @@ class UserController extends CI_Controller {
         $data = array();
     }
 
-    public function login(){
-       /*  If($this->session->userdata("userid"))
-        return redirect("LibraryController");    */     
+    public function index(){
+        If($this->session->userdata("userid"))
+        return redirect("LibraryController"); 
+		$this->login();
+	}
+
+   /*  public function login(){    
 		$this->load->view('login');
-    }
+    } */
 
     public function loginForm(){
         $data = array();
