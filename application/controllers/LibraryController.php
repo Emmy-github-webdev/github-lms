@@ -3,11 +3,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class LibraryController extends CI_Controller {
 
-	public function __construct(){
+	/* public function __construct(){
         parent::__construct();
 		If(!$this->session->userdata("userid"))
           return redirect("usercontroller/login");
-	}
+	} */
 
 	public function index(){
 		$this->home();
