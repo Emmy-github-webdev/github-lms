@@ -5,6 +5,8 @@ class DepartmentController extends CI_Controller {
   
     public function __construct(){
         parent::__construct();
+        If(!$this->session->userdata("userid"))
+          return redirect("usercontroller/login");
         $this->load->model('DepartmentModel');
         $data = array();
     }

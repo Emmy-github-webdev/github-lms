@@ -4,6 +4,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class StudentController extends CI_Controller {
     public function __construct(){
         parent::__construct();
+        If(!$this->session->userdata("userid"))
+          return redirect("usercontroller/login");
         $this->load->model('StudentModel');
         $this->load->model('DepartmentModel');
         $this->load->model('CollegeModel');

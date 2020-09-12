@@ -5,8 +5,10 @@ class AuthorController extends CI_Controller {
   
     public function __construct(){
         parent::__construct();
-        $this->load->model('AuthorModel');
-        $data = array();
+        If(!$this->session->userdata("userid"))
+         return redirect("usercontroller/login");
+         $this->load->model('AuthorModel');
+         $data = array();
     }
 
     public function addAuthor(){
