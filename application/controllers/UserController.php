@@ -38,6 +38,6 @@ class UserController extends CI_Controller {
         $this->session->unset_userdata($userid);
         $this->session->set_userdata('userLogin', FALSE);
         $this->session->sess_destroy();
-        redirect("UserControllerr/login");
+        redirect("UserController/login");
     }
 }    
