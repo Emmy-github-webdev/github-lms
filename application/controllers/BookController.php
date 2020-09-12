@@ -6,7 +6,7 @@ class BookController extends CI_Controller {
     public function __construct(){
         parent::__construct();
         If(!$this->session->userdata("userid"))
-          return redirect("usercontroller/login");
+          return redirect("UserController/login");
         $this->load->model('BookModel');
         $this->load->model('StudentModel');
         $this->load->model('DepartmentModel');

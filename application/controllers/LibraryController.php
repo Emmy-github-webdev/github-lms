@@ -6,7 +6,7 @@ class LibraryController extends CI_Controller {
 	public function __construct(){
         parent::__construct();
 		If(!$this->session->userdata("userid"))
-          return redirect("https://emmanuel-public-library.herokuapp.com/usercontroller/login.php");
+          return redirect("UserController/login");
 	}
 
 	public function index(){
